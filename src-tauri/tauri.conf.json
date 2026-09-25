@@ -1,0 +1,52 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Overfy",
+  "version": "0.3.5",
+  "identifier": "com.overfy.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:3000",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Overfy",
+        "width": 1000,
+        "height": 700,
+        "minWidth": 380,
+        "minHeight": 620,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true,
+        "backgroundColor": "#0a0a0a"
+      }
+    ],
+    "security": {
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "**"
+        ]
+      },
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://*.sndcdn.com https://*.dzcdn.net https://*.deezer.com https://*.yandex.net https://*.yandex.ru asset: http://asset.localhost https://asset.localhost; media-src 'self' blob: https://*.sndcdn.com https://*.dzcdn.net https://*.yandex.net https://*.yandex.ru asset: http://asset.localhost https://asset.localhost; connect-src 'self' https://*.soundcloud.com https://api-v2.soundcloud.com https://lrclib.net https://*.supabase.co wss://*.supabase.co"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug",
+      "minSdkVersion": 24,
+      "versionCode": 5
+    }
+  }
+}

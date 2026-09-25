@@ -1,0 +1,25 @@
+{
+  "name": "overfy",
+  "private": true,
+  "version": "0.3.5",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/clean-dist.cjs && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/plugin-dialog": "^2.7.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.10"
+  }
+}
